@@ -14,7 +14,21 @@ public class FrogModel{
       //might need to clear frame after it is rendered.
    }
    public void move(int x, int y){
-     
+      double xper = x/480;
+      double yper = y/320;
+      if(xper>yper){
+         if(xper>.5){
+            right();
+         }else{
+            left();
+         }
+      }else{
+         if(yper<.5){
+            up();
+         }else {
+            down();
+         }
+      }
    }
 
 
