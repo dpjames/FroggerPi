@@ -27,7 +27,6 @@ public class FrogView extends JFrame{
       @Override
       public void mouseClicked(MouseEvent e){
          model.move(e.getX(), e.getY());
-         System.out.println("Pressed");
       }
       @Override
       public void mouseEntered(MouseEvent e){
