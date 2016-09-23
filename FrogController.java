@@ -6,6 +6,7 @@ public class FrogController{
       view = new FrogView(model);
    }
    public void start(){
+      System.out.println("frog");
       while(true){
          view.render();      
       }
