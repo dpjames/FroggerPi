@@ -18,15 +18,15 @@ public class FrogModel{
       double yper = y/320;
       if(xper>yper){
          if(xper>.5){
-            right();
+            player.right();
          }else{
-            left();
+            player.left();
          }
       }else{
          if(yper<.5){
-            up();
+            player.up();
          }else {
-            down();
+            player.down();
          }
       }
    }
