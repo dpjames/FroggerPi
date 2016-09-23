@@ -6,27 +6,28 @@ public class FrogModel{
    private BufferedImage frame;
    private Graphics pen;
    public FrogModel(){
-      frame = new BufferedImage(480, 320, BufferedImage.TYPE_INT_ARGB);
+      frame = new BufferedImage(320, 240, BufferedImage.TYPE_INT_ARGB);
       player = new Frog();
       pen = frame.getGraphics();
    }
    public void render(Graphics g){
       player.render();
-      g.drawImage(frame, 0, 0, 480, 320, null);
+      g.drawImage(frame, 0, 0, 320, 240, null);
       //might need to clear frame after it is rendered.
       pen.setColor(Color.WHITE);
       pen.fillRect(0,0,480,320);
    }
    public void move(int x, int y){
-      double xper = x/480.0;
-      double yper = y/320.0;
+      System.out.println(x + " " + y);
+      double xper = x/320.0;
+      double yper = y/240.0;
       double xperbord = xper;
       double yperbord = yper;
       if(xper > .5){
-         xperbord = (480- x) / 480.0;
+         xperbord = (320 - x) / 320.0;
       } 
       if(yper > .5){
-         yperbord = (320 - y) / 320.0;
+         yperbord = (240 - y) / 240.0;
       }
       System.out.println(xper + " " + yper + " " + xperbord + " " + yperbord);
       if(xperbord<yperbord){

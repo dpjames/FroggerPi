@@ -13,7 +13,7 @@ public class FrogView extends JFrame{
       this.model = model;
       setDefaultCloseOperation(EXIT_ON_CLOSE);
       panel = new FrogPanel();
-      panel.setPreferredSize(new Dimension(480,320));
+      panel.setPreferredSize(new Dimension(320,240));
       add(panel);
       setVisible(true);
       pack();
